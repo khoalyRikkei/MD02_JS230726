@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding: 20px;
+        gap: 20px;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <section>
+      <h3>Spread</h3>
+      <button onclick="spread_ex()">Click</button>
+      <button onclick="changeStudent()">Change</button>
+    </section>
+    <section>
+      <h3>Rest</h3>
+      <button onclick="rest_ex()">Click</button>
+    </section>
+
+    <section>
+      <h3>Destructuring</h3>
+      <button onclick="destructuring_ex()">Click</button>
+    </section>
+
+    <section>
+      <div id="form">
+        <div class="input-form">
+          <input type="text" placeholder="Điền email" name="email" />
+          <p class="error" id="error-email"></p>
+        </div>
+        <div class="input-form">
+          <input type="text" placeholder="Điền username" name="username" />
+          <p class="error" id="error-username"></p>
+        </div>
+        <div class="input-form">
+          <input type="text" placeholder="Điền password" name="password" />
+          <p class="error" id="error-password"></p>
+        </div>
+
+        <div class="input-form">
+          <input
+            type="text"
+            placeholder="Điền repeat password"
+            name="repeatPassword"
+          />
+          <p class="error" id="error-repeatPassword"></p>
+        </div>
+        <div class="input-form">
+          <input type="text" placeholder="Địa chỉ" name="address" />
+          <p class="error" id="error-address"></p>
+        </div>
+
+        <input type="submit" value="Register" />
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
