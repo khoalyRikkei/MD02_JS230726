@@ -9,7 +9,7 @@ function handleCRUD() {
         case "R":
             break;
         case "U":
-            const newData = { name: "B", id: "SV01", age: 20 };
+            const newData = { name: "B", id: "SV01" };
             myClass.updateStudent(newData);
             break;
         case "D":
@@ -33,10 +33,10 @@ class Student {
             id: this.id,
         };
     }
-    setName(name) {
+    set setName(name) {
         this.name = name;
     }
-    setAge(age) {
+    set setAge(age) {
         this.age = age;
     }
 }
@@ -60,8 +60,8 @@ class ClassRoom {
     updateStudent(newData) {
         const newStudents = this.students.map((student) => {
             if (newData.id == student.id) {
-                student.setName(newData.name);
-                student.setAge(newData.age);
+                const test = { ...student, ...newData };
+                console.log(111, test);
             }
             return student;
         });
