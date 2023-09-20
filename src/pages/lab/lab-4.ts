@@ -9,7 +9,7 @@ function handleCRUD(): void {
     case "R":
       break;
     case "U":
-      const newData = { name: "B", id: "SV01", age: 20 };
+      const newData = { name: "B", id: "SV01" };
       myClass.updateStudent(newData);
       break;
     case "D":
@@ -42,10 +42,10 @@ class Student {
     };
   }
 
-  setName(name: string) {
+  set setName(name: string) {
     this.name = name;
   }
-  setAge(age: number) {
+  set setAge(age: number) {
     this.age = age;
   }
 }
@@ -69,12 +69,12 @@ class ClassRoom {
       console.log(student.getInfo);
     });
   }
-  
-  updateStudent(newData: { name: string; age: number; id: string }) {
+
+  updateStudent(newData: { id: string; [key: string]: any }) {
     const newStudents = this.students.map((student) => {
       if (newData.id == student.id) {
-        student.setName(newData.name);
-        student.setAge(newData.age);
+        const test = { ...student, ...newData };
+        console.log(111, test);
       }
       return student;
     });
