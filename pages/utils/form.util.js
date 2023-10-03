@@ -12,12 +12,19 @@ export class FormUtil {
       }
     });
 
-    if (user) {
-      return user;
-    }
+    return user;
   }
 
-  renderValidateForm() {
-    
+  renderValidateForm() {}
+  togglePassword(element) {
+
+    const inputElement = element.querySelector("input")
+    if(inputElement.type == "password") {
+      inputElement.type = "text"
+    } else {
+      inputElement.type = "password"
+
+    }
+
   }
 }
