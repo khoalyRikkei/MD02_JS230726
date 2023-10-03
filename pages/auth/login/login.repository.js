@@ -1,3 +1,5 @@
+import { getDataLocalStorage } from "../../../utils/method.js";
+
 export default class LoginRepository {
   getUserByEmailPassword(email, password) {
     const accounts = getDataLocalStorage("accounts") ?? [];

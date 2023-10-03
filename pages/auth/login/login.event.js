@@ -1,5 +1,5 @@
-import { FormUtil } from "../../utils/form.util";
-import LoginService from "./login.service";
+import { FormUtil } from "../../utils/formAuth.util.js";
+import LoginService from "./login.service.js";
 
 const loginService = new LoginService();
 
