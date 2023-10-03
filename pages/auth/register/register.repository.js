@@ -9,12 +9,12 @@ export default class RegisterRepository {
     return accounts.find((user) => user.email === email);
   }
 
-
-
   createUser(user) {
+    // database
     const accounts = getDataLocalStorage("accounts") ?? [];
     accounts.push(user);
     setDataLocalStorage("accounts", accounts);
-    return accounts.find((user) => user.email === email);
+
+    return accounts;
   }
 }

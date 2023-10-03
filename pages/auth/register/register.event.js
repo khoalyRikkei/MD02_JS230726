@@ -1,3 +1,4 @@
+import { FormUtil } from "../../utils/form.util";
 import RegisterService from "./register.service";
 
 export default class RegisterEvent {
@@ -13,5 +14,11 @@ export default class RegisterEvent {
     } else {
       alert(response.message);
     }
+  }
+  onTogglePassword(element) {
+    // Đổi type password
+    const formUtil = new FormUtil();
+
+    formUtil.togglePassword(element);
   }
 }

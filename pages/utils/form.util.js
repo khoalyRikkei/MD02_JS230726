@@ -17,14 +17,11 @@ export class FormUtil {
 
   renderValidateForm() {}
   togglePassword(element) {
-
-    const inputElement = element.querySelector("input")
-    if(inputElement.type == "password") {
-      inputElement.type = "text"
+    const inputElement = element.querySelector("input");
+    if (inputElement.type == "password") {
+      inputElement.type = "text";
     } else {
-      inputElement.type = "password"
-
+      inputElement.type = "password";
     }
-
   }
 }
